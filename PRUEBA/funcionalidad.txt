@@ -1,4 +1,4 @@
-//Declaramos variables (usé var porque como solo es una calculadora, decidí hacerlo por bloques y crear globales para que fuera mas organizadoo para mi)
+//Declaramos variables
 var operandoa;
 var operandob;
 var operacion;
@@ -24,7 +24,7 @@ function init(){
     var cero = document.getElementById('cero');
   }
 
-  //clicks
+  //Eventos de click
   uno.onclick = function(e){
     resultado.textContent = resultado.textContent  + "1";
 }
@@ -84,10 +84,10 @@ igual.onclick = function(e){
 }
 
 function limpiar(){
-    resultado.textContent = "000";
+    resultado.textContent = "";
   }
   function resetear(){
-    resultado.textContent = "000";
+    resultado.textContent = "";
     operandoa = 0;
     operandob = 0;
     operacion = "";
@@ -99,15 +99,12 @@ function limpiar(){
       case "+":
         res = parseFloat(operandoa) + parseFloat(operandob);
         break;
-  
       case "-":
           res = parseFloat(operandoa) - parseFloat(operandob);
           break;
-  
       case "*":
         res = parseFloat(operandoa) * parseFloat(operandob);
         break;
-  
       case "/":
         res = parseFloat(operandoa) / parseFloat(operandob);
         break;
